@@ -6,7 +6,14 @@ Nos ayudaremos para la arquitectura sobre los servicios y los clientes, implemen
 * Git
 * Java
 * Heroku
-* DBeaver (O un gestor de bases de datos PostgreSQL)
+* CircleCi
+* DBeaver (O un gestor de bases de datos PostgreSQL)  
+
+## CircleCi  
+ [![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://app.circleci.com/pipelines/github/Carlos96999/AREP-LAB-3)  
+
+## Heroku  
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://arep-lab-3.herokuapp.com/)
 
 ## Instalación
 Para usar este programa debe abrir la consola (CMD) ir a la ubicación donde desee guardar el programa y ejecutar este comando:
@@ -15,25 +22,26 @@ git clone https://github.com/Carlos96999/AREP-LAB-3.git
 ```
 
 ## Ejecución
-Entramos a la carpeta creada por el comando anterior y entramos a "mi-desviacionEstandar" desde la consola de comandos (CMD), ejecutamos estos comandos:
+Entramos a la carpeta creada por el comando anterior y entramos a "AREP-LAB-3" desde la consola de comandos (CMD), ejecutamos estos comandos:
 ```
 * mvn package
 * mvn clean compile
 ```
+<img src="https://github.com/Carlos96999/AREP-LAB-3/blob/master/img/ejecucion.PNG?raw=true">  
 
 ## Pruebas
 Si desea conocer la ejecución de las pruebas, puede ejecutar en consola el comando mvn test (en la misma ubicación donde ejecuto los comandos de la parte de Ejecución).
 
-<img src="?raw=true">
+<img src="https://github.com/Carlos96999/AREP-LAB-3/blob/master/img/pruebas.PNG?raw=true">
 
 
 ## Documentación
 Encontrara la documentación sobre el programa en la siguiente ubicación
 ```
-target/site/apidocs
+javaDocs
 ```
 
-<img src="?raw=true">
+<img src="https://github.com/Carlos96999/AREP-LAB-3/blob/master/img/documentacion.PNG?raw=true">
 
 ## Desarrollo
 Este laboratorio fue construido con las siguiente herramientas:
@@ -43,7 +51,7 @@ Este laboratorio fue construido con las siguiente herramientas:
 * [Heroku](https://www.heroku.com/)
 
 ## Licencia
-[Licencia **GNU General Public License v3.0**](/LICENSE)
+[Licencia **GNU General Public License v3.0**](https://github.com/Carlos96999/AREP-LAB-3/blob/master/LICENSE)
 
 ## DERECHOS DE AUTOR
 
