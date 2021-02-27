@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Matcher;
+
 import edu.escuelaing.arep.HttpServer.HttpServer;
 import edu.escuelaing.arep.HttpServer.Processors;
 import edu.escuelaing.arep.PicoSpring.RequestMapping;
@@ -35,7 +37,8 @@ public class PicoSpringBoot implements Processors
 		}
 	}
 	
-	private void loadComponent(String componentName) throws ClassNotFoundException {
+	private void loadComponent(String componentName) throws ClassNotFoundException 
+	{
         Class componentClass = Class.forName(componentName);
         Method[] ComponentMethods = componentClass.getDeclaredMethods();
         for(Method m: ComponentMethods){
@@ -47,14 +50,17 @@ public class PicoSpringBoot implements Processors
 	
 	public void startServer() throws IOException
 	{
+		Matcher matcher = null;
 		hServer = new HttpServer();
 		hServer.registerProcessor("/springapp", this);
 		hServer.startServer(8080);
+		String archivo = matcher.group().substring(4);
+		hServer.request(archivo);
 	}
 	
 	public static void main(String[] args) throws IOException, ClassNotFoundException
 	{
-		PicoSpringBoot.getInstance().loadComponent(args);
+		PicoSpringBoot.getInstance().loadComponent("edu.escuelaing.arep.picoSpringDemo");
 		PicoSpringBoot.getInstance().startServer();
 	}
 	
@@ -64,7 +70,7 @@ public class PicoSpringBoot implements Processors
 				+ "Content-Type: text/html\r\n"
 				+ "\r\n";
 	}
-
+	
 	@Override
 	public String handle(String path, String re, String res) 
 	{
@@ -75,7 +81,6 @@ public class PicoSpringBoot implements Processors
 			try {
 				resp = requestProcessors.get(path).invoke(null, null).toString();
 			} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
