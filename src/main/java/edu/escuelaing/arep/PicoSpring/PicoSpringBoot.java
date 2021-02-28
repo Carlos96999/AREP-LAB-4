@@ -21,7 +21,7 @@ public class PicoSpringBoot implements Processors
 	/*
 	 * Constructor del pico spring
 	 */
-	private PicoSpringBoot() {}
+	public PicoSpringBoot() {}
 	
 	public static PicoSpringBoot getInstance() 
 	{
@@ -36,7 +36,7 @@ public class PicoSpringBoot implements Processors
 		}
 	}
 	
-	private void loadComponent(String componentName) throws ClassNotFoundException 
+	public void loadComponent(String componentName) throws ClassNotFoundException 
 	{
         Class componentClass = Class.forName(componentName);
         Method[] ComponentMethods = componentClass.getDeclaredMethods();
@@ -56,12 +56,6 @@ public class PicoSpringBoot implements Processors
 		hServer.startServer(8080);
 		String archivo = matcher.group().substring(4);
 		hServer.request(archivo);
-	}
-	
-	public static void main(String[] args) throws IOException, ClassNotFoundException
-	{
-		PicoSpringBoot.getInstance().loadComponent("edu.escuelaing.arep.picoSpringDemo");
-		PicoSpringBoot.getInstance().startServer();
 	}
 	
 	public String validOkHttpHeader()
