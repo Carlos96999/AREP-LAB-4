@@ -21,12 +21,18 @@ git clone https://github.com/Carlos96999/AREP-LAB-4.git
 ```
 
 ## Ejecución
-Entramos a la carpeta creada por el comando anterior y entramos a "AREP-LAB-3" desde la consola de comandos (CMD), ejecutamos estos comandos:
+Entramos a la carpeta creada por el comando anterior y entramos a "AREP-LAB-4" desde la consola de comandos (CMD), ejecutamos estos comandos:
 ```
 * mvn package
 * mvn clean compile
 ```
 <img src="https://github.com/Carlos96999/AREP-LAB-4/blob/master/img/ejecucion.PNG?raw=true">  
+
+## Iniciar programa de forma local
+Entramos a la carpeta creada del laboratorio "AREP-LAB-4" y ejecutamos el siguiente comando:  
+```  
+java -cp target/classes edu.escuelaing.arep.PicoSpring.PicoSpringBoot edu.escuelaing.arep.HttpServer.HttpServer
+```  
 
 ## Pruebas
 Si desea conocer la ejecución de las pruebas, puede ejecutar en consola el comando mvn test (en la misma ubicación donde ejecuto los comandos de la parte de Ejecución).

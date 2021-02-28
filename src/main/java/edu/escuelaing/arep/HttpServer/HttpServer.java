@@ -80,10 +80,39 @@ public class HttpServer {
 			          "<meta charset=\"UTF-8\">" + 
 			          "<title>AREP LAB 4</title>\n" + 
 			          "</head>" + 
-			          "<body>" + 
-			          "<h1>Mi propio mensaje</h1>" + 
-			          "</body>" + 
-			          "</html>" + inputLine; 
+			          "<body bgcolor='#cddf89'>"
+						+ "<font size='6' color='#df7644' face='Tahoma'>"
+							+ "Menú en formato texto con font"
+						+ "</font>"
+						+ "<br><br>"
+
+						+ "<nav class='menu'>"
+
+						+ "<ul>"
+							+ "<li><a href='/springapp/inicio'>"
+								+ "<font size='6' color='#0f6a9d' face='Comics Sans CM'>"
+									+ "Inicio"
+								+ "</font>"
+							+ "</a></li>"
+
+						+ "<li><a href='/springapp/pruebajavascript'>"
+							+ "<font size='6' color='#1f6dfd' face='Comics Sans CM'>"
+								+ "Prueba del Java Script"
+							+ "</font>"
+						+ "</a></li>"
+
+						+ "<li><a href='/springapp/pruebaimagen'>"
+							+ "<font size='6' color='#df619d' face='Comics Sans CM'>"
+								+ "Prueba de la imagen"
+							+ "</font>"
+						+ "</a></li>"
+
+					+ "</ul>"
+
+				+ "</nav>"
+
+			+ "</body>"
+			          +"</html>" + inputLine; 
 	   }
 	   else
 	   {

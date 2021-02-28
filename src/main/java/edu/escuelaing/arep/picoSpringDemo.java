@@ -30,19 +30,13 @@ public class picoSpringDemo
 
 					+ "<li><a href='/springapp/pruebajavascript'>"
 						+ "<font size='6' color='#1f6dfd' face='Comics Sans CM'>"
-							+ "Pagina 1"
+							+ "Prueba del Java Script"
 						+ "</font>"
 					+ "</a></li>"
 
 					+ "<li><a href='/springapp/pruebaimagen'>"
 						+ "<font size='6' color='#df619d' face='Comics Sans CM'>"
-							+ "Pagina 2"
-						+ "</font>"
-					+ "</a></li>"
-
-					+ "<li><a href='#'>"
-						+ "<font size='6' color='#49029d' face='Comics Sans CM'>"
-							+ "Pagina 3"
+							+ "Prueba de la imagen"
 						+ "</font>"
 					+ "</a></li>"
 
