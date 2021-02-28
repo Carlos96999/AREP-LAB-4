@@ -3,6 +3,7 @@ package edu.escuelaing.arep.HttpServer;
 import java.net.*;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
 import java.io.*;
 import org.apache.commons.io.FilenameUtils;
 
@@ -33,6 +34,7 @@ public class HttpServer {
 	   {
 	   //Socket clientSocket = null;
 		   clientSocket = null;
+
 	   try {
 	       System.out.println("Listo para recibir ...");
 	       clientSocket = serverSocket.accept();
@@ -90,7 +92,7 @@ public class HttpServer {
 
     out.println(outputLine);
     out.close(); 
-    in.close(); 
+    in.close();
     clientSocket.close();
 	   }
     serverSocket.close(); 
@@ -105,7 +107,7 @@ public class HttpServer {
         switch (change) 
         {
             case "png":
-            	path += "image/" + fichero;
+            	path += "imagen/" + fichero;
             	value = true;
                 break;
             case "js":
@@ -170,7 +172,7 @@ public class HttpServer {
 		
         String encabezado = null;
         if (value) {
-        	encabezado = "HTTP/1.1 200 \r\nAccess-Control-Allow-Origin: *\r\nContent-Type: image/" + change + "\r\nConnection: close\r\nContent-Length:" + length + "\r\n\r\n";
+        	encabezado = "HTTP/1.1 200 \r\nAccess-Control-Allow-Origin: *\r\nContent-Type: imagen /" + change + "\r\nConnection: close\r\nContent-Length:" + length + "\r\n\r\n";
         } else {
         	encabezado = "HTTP/1.1 200 \r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html\r\n\r\n";
         }

@@ -5,13 +5,12 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+//import java.util.logging.Level;
+//import java.util.logging.Logger;
 import java.util.regex.Matcher;
-
 import edu.escuelaing.arep.HttpServer.HttpServer;
 import edu.escuelaing.arep.HttpServer.Processors;
-import edu.escuelaing.arep.PicoSpring.RequestMapping;
+//import edu.escuelaing.arep.PicoSpring.RequestMapping;
 
 public class PicoSpringBoot implements Processors
 {
@@ -51,6 +50,7 @@ public class PicoSpringBoot implements Processors
 	public void startServer() throws IOException
 	{
 		Matcher matcher = null;
+		System.out.println("inicio -----------------------");
 		hServer = new HttpServer();
 		hServer.registerProcessor("/springapp", this);
 		hServer.startServer(8080);
@@ -84,6 +84,7 @@ public class PicoSpringBoot implements Processors
 				e.printStackTrace();
 			}
 		}
+		System.out.println(validOkHttpHeader() + resp);
 		return validOkHttpHeader() + resp;
 	}
 }

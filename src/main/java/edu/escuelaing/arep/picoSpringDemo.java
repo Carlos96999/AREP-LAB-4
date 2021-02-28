@@ -4,11 +4,10 @@ import edu.escuelaing.arep.PicoSpring.RequestMapping;
 
 public class picoSpringDemo 
 {
-	@RequestMapping("/mensaje")
+	@RequestMapping("/inicio")
 	public static String prueba()
 	{
-		return
-		          "<!DOCTYPE html>" + 
+		return    "<!DOCTYPE html>" + 
 		          "<html>" + 
 		          "<head>" + 
 		          "<meta charset=\"UTF-8\">" + 
@@ -23,19 +22,19 @@ public class picoSpringDemo
 					+ "<nav class='menu'>"
 
 					+ "<ul>"
-						+ "<li><a href='#'>"
+						+ "<li><a href='/springapp/inicio'>"
 							+ "<font size='6' color='#0f6a9d' face='Comics Sans CM'>"
 								+ "Inicio"
 							+ "</font>"
 						+ "</a></li>"
 
-					+ "<li><a href='#'>"
+					+ "<li><a href='/springapp/pruebajavascript'>"
 						+ "<font size='6' color='#1f6dfd' face='Comics Sans CM'>"
 							+ "Pagina 1"
 						+ "</font>"
 					+ "</a></li>"
 
-					+ "<li><a href='#'>"
+					+ "<li><a href='/springapp/pruebaimagen'>"
 						+ "<font size='6' color='#df619d' face='Comics Sans CM'>"
 							+ "Pagina 2"
 						+ "</font>"
@@ -55,12 +54,20 @@ public class picoSpringDemo
 		          +"</html>";
 	}
 	
-	@RequestMapping("/mensaje2")
-	public static String prueba2()
+	@RequestMapping("/pruebajavascript")
+	public static String pruebaJavaScript()
 	{
-		return "<html><title>thanks</title><head><script alert(\"Que la Fuerza te Acompañe!\");></script></head>"
-        		+ "<body style = \"background: url(https://i.pinimg.com/originals/44/ac/f0/44acf0c89a96f3cd5e3aaaa6c7c61dfc.jpg) no-repeat ; background-size: 100% 100%;\">\r\n"
+		return "<html><title>thanks</title><head><script type=\"text/javascript\">\r\n"
+				+ "  alert(\"Laboratorio de AREP :3\");\r\n"
+				+ "</script></head>"
+        		+ "<body>\r\n"
         		+ "</body>"
         		+ "</html>";
 	}
+	
+	@RequestMapping("/pruebaimagen")
+    public static String pruebaImagen()
+	{
+        return "<html><title>Imagen</title><body><img src=\"https://www.vhv.rs/dpng/d/423-4235481_teem-lucario-hd-png-download.png\"></body></html>";
+    }
 }
