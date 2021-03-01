@@ -12,7 +12,7 @@ Nos ayudaremos para la arquitectura sobre los servicios y los clientes, implemen
  [![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://app.circleci.com/pipelines/github/Carlos96999/AREP-LAB-4)  
 
 ## Heroku  
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://arep-lab-4.herokuapp.com/)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://nameless-thicket-38928.herokuapp.com/)
 
 ## Instalación
 Para usar este programa debe abrir la consola (CMD) ir a la ubicación donde desee guardar el programa y ejecutar este comando:
@@ -31,8 +31,12 @@ Entramos a la carpeta creada por el comando anterior y entramos a "AREP-LAB-4" d
 ## Iniciar programa de forma local
 Entramos a la carpeta creada del laboratorio "AREP-LAB-4" y ejecutamos el siguiente comando:  
 ```  
-java -cp target/classes edu.escuelaing.arep.PicoSpring.PicoSpringBoot edu.escuelaing.arep.HttpServer.HttpServer
+java -cp target/classes edu.escuelaing.arep.App edu.escuelaing.arep.HttpServer.HttpServer
 ```  
+<img src="https://github.com/Carlos96999/AREP-LAB-4/blob/master/img/vistaInicial.PNG?raw=true">    
+<img src="https://github.com/Carlos96999/AREP-LAB-4/blob/master/img/vistaJS.PNG?raw=true">    
+<img src="https://github.com/Carlos96999/AREP-LAB-4/blob/master/img/vistaImagen.PNG?raw=true">    
+
 
 ## Pruebas
 Si desea conocer la ejecución de las pruebas, puede ejecutar en consola el comando mvn test (en la misma ubicación donde ejecuto los comandos de la parte de Ejecución).
