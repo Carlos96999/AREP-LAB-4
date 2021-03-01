@@ -53,7 +53,7 @@ public class PicoSpringBoot implements Processors
 		System.out.println("inicio -----------------------");
 		hServer = new HttpServer();
 		hServer.registerProcessor("/springapp", this);
-		hServer.startServer(8080);
+		hServer.startServer(8001);
 		String archivo = matcher.group().substring(4);
 		hServer.request(archivo);
 	}
