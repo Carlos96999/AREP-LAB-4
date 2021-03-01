@@ -52,7 +52,7 @@ public class HttpServer {
 	   String res = null;
 	   
 	   while ((inputLine = in.readLine()) != null) {
-	      System.out.println("Recibí: " + inputLine);
+	      System.out.println("Recibi: " + inputLine);
 	      if(isFirstLine){
 	          path=inputLine.split(" ")[1];
 	          isFirstLine=false;
@@ -82,7 +82,7 @@ public class HttpServer {
 			          "</head>" + 
 			          "<body bgcolor='#cddf89'>"
 						+ "<font size='6' color='#df7644' face='Tahoma'>"
-							+ "Menú en formato texto con font"
+							+ "Menu en formato texto con font"
 						+ "</font>"
 						+ "<br><br>"
 

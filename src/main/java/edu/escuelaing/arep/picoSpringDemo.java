@@ -15,7 +15,7 @@ public class picoSpringDemo
 		          "</head>" + 
 		          "<body bgcolor='#cddf89'>"
 					+ "<font size='6' color='#df7644' face='Tahoma'>"
-						+ "Menú en formato texto con font"
+						+ "Menu en formato texto con font"
 					+ "</font>"
 					+ "<br><br>"
 
