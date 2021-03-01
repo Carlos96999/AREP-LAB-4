@@ -60,6 +60,12 @@ public class PicoSpringBoot implements Processors
 		hServer.request(archivo);
 	}
 	
+	public static void main(String[] args) throws IOException, ClassNotFoundException
+	{
+		getInstance().loadComponent("edu.escuelaing.arep.picoSpringDemo");
+		getInstance().startServer();
+	}
+
 	public String validOkHttpHeader()
 	{
 		return "HTTP/1.1 200 OK\r\n"
