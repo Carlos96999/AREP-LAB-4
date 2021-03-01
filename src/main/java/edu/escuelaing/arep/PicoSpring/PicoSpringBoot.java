@@ -55,7 +55,7 @@ public class PicoSpringBoot implements Processors
 		port = getPort();
 		hServer = new HttpServer();
 		hServer.registerProcessor("/springapp", this);
-		hServer.startServer(port);
+		hServer.startServer(getPort());
 		String archivo = matcher.group().substring(4);
 		hServer.request(archivo);
 	}
