@@ -17,6 +17,7 @@ public class PicoSpringBoot implements Processors
 	private static PicoSpringBoot _instance = new PicoSpringBoot();
 	private Map<String, Method> requestProcessors = new HashMap();
 	private HttpServer hServer;
+	private int port;
 	
 	/*
 	 * Constructor del pico spring
@@ -51,9 +52,10 @@ public class PicoSpringBoot implements Processors
 	{
 		Matcher matcher = null;
 		System.out.println("inicio -----------------------");
+		port = getPort();
 		hServer = new HttpServer();
 		hServer.registerProcessor("/springapp", this);
-		hServer.startServer(8001);
+		hServer.startServer(port);
 		String archivo = matcher.group().substring(4);
 		hServer.request(archivo);
 	}
@@ -80,5 +82,14 @@ public class PicoSpringBoot implements Processors
 		}
 		System.out.println(validOkHttpHeader() + resp);
 		return validOkHttpHeader() + resp;
+	}
+	
+	private static int getPort()
+	{
+		if(System.getenv("PORT") != null)
+		{
+			return Integer.parseInt(System.getenv("PORT"));
+		}
+		return 8080; 
 	}
 }
